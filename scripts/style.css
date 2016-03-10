@@ -26,6 +26,7 @@ a{
   width: 40px;
   z-index: 10;
   background-image: url(../imgs/bar.gif);
+  background-size: 40px;
 }
 .left-container {
   left:0;
