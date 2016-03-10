@@ -1,6 +1,4 @@
 // AFTER DOM LOAD
-var popup = document.getElementsByClassName('pops-ad');
-
 $(document).ready(function() {
 
   var a1    = document.querySelector("#A1");
@@ -43,7 +41,7 @@ $(document).ready(function() {
      }
    });
 
-   $('.marquee1-1 > span').replaceWith('HDSA2016')
+   $('.marquee1-1 > span').text('HDSA2016')
  } else {
    // ASSIGN RANDOM TO
   allA.forEach(function(el) {
@@ -131,8 +129,35 @@ $(document).ready(function() {
 
   });
 
+  // COLORS
+  var $win = $(window);
+  var w = 0;
+  var h = 0;
+
+  getWidth = function() {
+      w = $win.width();
+      h = $win.height();
+  };
+
+  $win.resize(getWidth).mousemove(function(e) {
+
+      var xOff = Math.round(e.pageX/h * 255);
+      var yOff = Math.round(e.pageY/h * 255);
+      var z0ff = 100;
+
+      // $(".marquee1-1").css('background','linear-gradient(rgb(' + xOff + ',' + yOff + ', 150), rgb(' + yOff + ',' + xOff + ',150), rgb(' + xOff + ',' + xOff + ',150))');
+      $(".header > .header-title").css('background','hsla(' + (xOff/1.2) + ',100%, 50%, 1)');
+      $(".header > .header-sub").css('background','hsla(' + (yOff) + ',100%, 50%, 1)');
+      $(".footer > .footer-title").css('background','hsla(' + (300 - xOff) + ',100%, 50%, 1)');
+      $(".footer > .footer-sub").css('background','hsla(' + (300 - yOff) + ',100%, 50%, 1)');
+
+  }).resize();
+
+
 
 });
+
+var popup = document.getElementsByClassName('pops-ad');
 
 // WIN CONDITIONS
 function winMatch() {
@@ -185,27 +210,3 @@ function beerMatch() {
   }
 
 };
-
-// COLORS
-var $win = $(window);
-var w = 0;
-var h = 0;
-
-getWidth = function() {
-    w = $win.width();
-    h = $win.height();
-};
-
-$win.resize(getWidth).mousemove(function(e) {
-
-    var xOff = Math.round(e.pageX/h * 255);
-    var yOff = Math.round(e.pageY/h * 255);
-    var z0ff = 100;
-
-    // $(".marquee1-1").css('background','linear-gradient(rgb(' + xOff + ',' + yOff + ', 150), rgb(' + yOff + ',' + xOff + ',150), rgb(' + xOff + ',' + xOff + ',150))');
-    $(".header > .header-title").css('background','hsla(' + (xOff/1.2) + ',100%, 50%, 1)');
-    $(".header > .header-sub").css('background','hsla(' + (yOff) + ',100%, 50%, 1)');
-    $(".footer > .footer-title").css('background','hsla(' + (300 - xOff) + ',100%, 50%, 1)');
-    $(".footer > .footer-sub").css('background','hsla(' + (300 - yOff) + ',100%, 50%, 1)');
-
-}).resize();
