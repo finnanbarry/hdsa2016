@@ -177,6 +177,7 @@ a{
   backface-visibility: hidden;
   z-index: 0;
 	transform: rotateY(0deg);
+  cursor: pointer;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -354,11 +355,11 @@ a{
 .pops-7{
   width: 400px;
   height: 257px;
-  z-index: 180;
+  z-index: 80;
 }
 .pops-7-content{
   background-image: url(../imgs/pops/lucky.gif);
-  background-size: 400px 237px;
+  background-size: 100% 91%;
 }
 .pops-p-7{
   top: 14%;
@@ -469,7 +470,8 @@ a{
 
 
 /* MOBILE */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
+
   .coin-box{
     width: 33.33%;
   }
@@ -484,4 +486,32 @@ a{
     padding: 100px 1%;
     overflow: hidden;
   }
+
+
+
+  .pops-1{
+    width: 330px;
+    height: 273px;
+    z-index: 100;
+  }
+  .pops-1-content .signup-box {
+    height: 145px;
+  }
+  .pops-p-1{
+    left: 10%;
+    top: 30%;
+  }
+
+  .pops-p-4 {
+    left: -20%;
+  }
+
+  .pops-7{
+    width: 300px;
+  }
+  .pops-7-content {
+    background-size: 100% 91%;
+  }
+
+
 }
