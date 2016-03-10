@@ -1,0 +1,487 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+html{
+  background-image: url(../imgs/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+body .center-container{
+  width:100%;
+  height:100%;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.sidebar{
+  background-color: blue;
+  position:absolute;
+  top: 0;
+  height:100vh;
+  width: 40px;
+  z-index: 10;
+  background-image: url(../imgs/bar.gif);
+}
+.left-container {
+  left:0;
+}
+.right-container {
+  right: 0;
+}
+.center-container{
+  position: relative;
+  height: 100%;
+}
+.submit-butt{
+  text-align: center;
+}
+.mc-field-group{
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+.header{
+  position: absolute;
+  top: 0;
+  height: 100px;
+  background: #fff;
+  padding: 0 40px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+.header-title, .header-sub{
+  height: 50px;
+  border-bottom: 1px solid #000;
+  padding: 13px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.header-title span, .header-sub span, .footer-title span, .footer-sub span{
+  float: left;
+  width: 50%;
+}
+.header-sub{
+  height: 50px;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  background: #fff;
+  width: 100%;
+  padding: 0 40px;
+  font-size: 20px;
+  text-align: center;
+}
+.footer-title, .footer-sub {
+  height: 50px;
+  border-top: 1px solid #000;
+  padding: 13px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+.footer-title{
+
+}
+.sub-button{
+  color: blue;
+}
+
+
+
+
+
+/* MARQUEE */
+.marquee1 div, .marquee2 div {
+  display: block;
+  width: 200%;
+  height: auto;
+  position: absolute;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+.marquee1-1{
+  text-transform: uppercase;
+  animation: marq1 9s linear infinite;
+}
+.marquee1-2{
+  animation: marq2 6s linear infinite;
+}
+.marquee2-1{
+  animation: marq2 6s linear infinite;
+}
+.marquee2-2{
+  animation: marq1 12s linear infinite;
+}
+@keyframes marq1 {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+@keyframes marq2 {
+  0% { right: 0; }
+  100% { right: -100%; }
+}
+
+
+
+
+
+
+
+/*COIN TALK*/
+.coin-container{
+  padding: 100px 10%;
+  height: 100%;
+  position: relative;
+}
+.coin-box{
+  width: 20%;
+  height: 25%;
+  float: left;
+  padding: 10px;
+  perspective: 1000;
+}
+.coin {
+  background: url(../imgs/coin1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  transition: .3s;
+  -webkit-transition: .3s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform: translateZ(0);
+}
+.cface{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: inline-block;
+  -webkit-backface-visibility: hidden ;
+  backface-visibility: hidden;
+  z-index: 0;
+	transform: rotateY(0deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cback{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  z-index: 10;
+}
+.correct, .active, .wrong{
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+
+
+
+
+
+.f1{
+  background-image: url(../imgs/coins/xlabourcoin11.png);
+}
+.f2{
+  background-image: url(../imgs/coins/xlabourcoin2.png);
+}
+.f3{
+  background-image: url(../imgs/coins/xlabourcoin3.png);
+}
+.f4{
+  background-image: url(../imgs/coins/xlabourcoin4.png);
+}
+.f5{
+  background-image: url(../imgs/coins/xlabourcoin5.png);
+}
+.f6{
+  background-image: url(../imgs/coins/xlabourcoin6.png);
+}
+.f7{
+  background-image: url(../imgs/coins/xlabourcoin7.png);
+}
+.f8{
+  background-image: url(../imgs/coins/xlabourcoin8.png);
+}
+.f9{
+  background-image: url(../imgs/coins/xlabourcoin9.png);
+}
+.f10{
+  background-image: url(../imgs/coins/xlabourcoin10.png);
+}
+
+
+
+
+
+
+
+/* ADVERTS */
+.pops-ad{
+  position: fixed;
+  border: 1px solid black;
+  overflow: hidden;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.60);
+}
+.pops-1-content, .pops-2-content, .pops-3-content, .pops-4-content, .pops-5-content, .pops-6-content, .pops-7-content, .pops-8-content, .pops-9-content, .pops-10-content {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.pops-1{
+  width: 500px;
+  height: 400px;
+  z-index: 100;
+}
+.pops-1-content{
+  background-color: #FFFF02;
+}
+.pops-p-1{
+  top: 30%;
+  left: 32%;
+}
+.pops-1-content .img1, .pops-1-content .img2{
+  width: 100%;
+}
+.pops-1-content .img1{
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+.pops-1-content .signup-box{
+  width: 100%;
+  height: 200px;
+  margin-top: 35px;
+  margin-bottom: -30px;
+}
+.pops-1-content .signup-box img{
+  width: 25%;
+}
+.pops-1-content .signup-box #mc_embed_signup{
+  width: 47%;
+  display: inline-block;
+}
+.mc-field-group{
+  text-align: center;
+}
+.pops-2{
+  width: 476px;
+  height: 476px;
+  z-index: 80;
+}
+.pops-2-content{
+  background-image: url(../imgs/gif/winwinwin.gif);
+}
+.pops-p-2{
+  top: 10%;
+  left: 19%;
+}
+.pops-3{
+  width: 200px;
+  height: 300px;
+  z-index: 60;
+}
+.pops-3-content{
+  background-image: url(../imgs/pops/dolladolla.gif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pops-p-3{
+  top: 60%;
+  left: 55%;
+}
+.pops-4{
+  width: 300px;
+  height: 233px;
+  z-index: 80;
+}
+.pops-4-content{
+  background-image: url(../imgs/pops/signup2.gif);
+  background-size: 300px 208px;
+  background-repeat: no-repeat;
+}
+.pops-p-4{
+  top: 60%;
+  left: 10%;
+}
+.pops-5{
+  width: 300px;
+  height: 233px;
+  z-index: 80;
+}
+.pops-5-content{
+  background-image: url(../imgs/pops/HDSA201623.gif);
+  background-size: 300px 208px;
+  background-repeat: no-repeat;
+}
+.pops-p-5{
+  top: 20%;
+  left: 56%;
+}
+.pops-6{
+  width: 420px;
+  height: 82px;
+  z-index: 90;
+}
+.pops-6-content{
+  background-image: url(../imgs/pops/worker.gif);
+  background-size: 420px 50px;
+}
+.pops-p-6{
+  top: 40%;
+  left: 66%;
+}
+.pops-7{
+  width: 400px;
+  height: 257px;
+  z-index: 180;
+}
+.pops-7-content{
+  background-image: url(../imgs/pops/lucky.gif);
+  background-size: 400px 237px;
+}
+.pops-p-7{
+  top: 14%;
+  left: 5%;
+}
+.pops-8{
+  width: 300px;
+  height: 300px;
+  z-index: 80;
+}
+.pops-8-content{
+  background: radial-gradient(#71FA73, #0082BE, #AF6CFF);
+}
+.beer-img{
+  height: 200px;
+  width: 204px;
+  display: block;
+  margin: 0 auto;
+  background-image: url(../imgs/pops/BEER.png);
+  background-size: 200px 204px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.beer-button{
+  height: 50px;
+  width: 180px;
+  display: block;
+  cursor: pointer;
+  margin: 7px 0px 10px 43px;
+  background-image: url(../imgs/pops/FREEBEER2.gif);
+  background-size: 180px 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pops-p-8{
+  top: 50%;
+  left: 16%;
+}
+.pops-9{
+  width: 300px;
+  height: 229px;
+  z-index: 80;
+}
+.pops-9-content{
+  background-image: url(../imgs/pops/price.gif);
+  background-size: 300px 204px;
+}
+.pops-p-9{
+  top: 10%;
+  left: 64%;
+}
+.pops-10{
+  width: 300px;
+  height: 106px;
+  z-index: 50;
+}
+.pops-10-content{
+  background-image: url(../imgs/pops/less.gif);
+}
+.pops-p-10{
+  top: 70%;
+  left: 66%;
+}
+
+
+
+
+.pops-bar{
+  width: 100%;
+  height: 25px;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+.pops-bar span{
+  width: 85%;
+  height: 25%;
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+}
+.pops-close{
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  float: right;
+  border: 1px solid #000;
+  margin: 3px 5px 3px 0;
+  cursor: pointer;
+    background-image: url(../imgs/close2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.pops-close:active{
+  background-color: #000;
+}
+.pops-hide{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* MOBILE */
+@media screen and (max-width: 800px) {
+  .coin-box{
+    width: 33.33%;
+  }
+
+  .left-container, .right-container{
+    display: none;
+  }
+  .header, .footer{
+    padding: 0;
+  }
+  .coin-container{
+    padding: 100px 1%;
+    overflow: hidden;
+  }
+}
